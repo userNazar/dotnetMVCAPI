@@ -1,0 +1,31 @@
+# .NET Core
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+*.userprefs
+*.vscode/
+*.vssscc
+*.vspscc
+
+# NuGet Packages
+*.nuget.props
+*.paket.*
+*.dotnet-*
+project.lock.json
+packages/
+
+# Rider files
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
