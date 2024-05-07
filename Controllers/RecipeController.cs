@@ -10,7 +10,7 @@ namespace RecipeDB.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    
+
     public class RecipesController : ControllerBase
     {
         private readonly ApiDbContext _context;
@@ -26,6 +26,22 @@ namespace RecipeDB.Controllers
         {
             return await _context.Recipes.ToListAsync();
         }
+
+
+        // GET: api/recipes/1
+        [HttpGet("recipeId/{id}")]
+        public async Task<ActionResult<Recipe>> GetRecipeByRecipeId(int id)
+        {
+            var recipe = await _context.Recipes.FindAsync(id);
+
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+
+            return recipe;
+        }
+
 
         // GET: api/recipes/5
         [HttpGet("{id}")]

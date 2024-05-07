@@ -19,5 +19,6 @@ namespace RecipeDB.Models
 
         [Required]
         public string Instructions { get; set; }
+        public string ImagePath { get; set; }
     }
 }
